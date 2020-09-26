@@ -2,7 +2,7 @@
 //  PlaymobilController.swift
 //  My Playmo
 //
-//  Created by matthieu passerel on 03/09/2020.
+//  Created by Rodolphe DUPUY on 03/09/2020.
 //
 
 import UIKit
