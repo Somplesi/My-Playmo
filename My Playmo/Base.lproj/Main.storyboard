@@ -13,7 +13,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--My Playmos-->
+        <!--Playmobil-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeController" customModule="My_Playmo" customModuleProvider="target" sceneMemberID="viewController">
@@ -24,6 +24,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="o4b-CJ-kKH">
                                 <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="separatorColor" red="0.1597114503" green="0.58593791719999999" blue="0.83135718110000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="CategoryCell" rowHeight="418" id="wiC-aC-l0k" customClass="CategoryCell" customModule="My_Playmo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="418"/>
@@ -72,7 +73,7 @@
                             <constraint firstItem="o4b-CJ-kKH" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="PP4-lU-Som"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="My Playmos" id="h0R-yz-Mw8">
+                    <navigationItem key="navigationItem" title="Playmobil" id="h0R-yz-Mw8">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="cart" catalog="system" id="hLQ-1t-OeO">
                             <color key="tintColor" red="0.166549325" green="0.58482438329999997" blue="0.83051067590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
@@ -127,9 +128,13 @@
                                                     <rect key="frame" x="214.5" y="0.0" width="65.5" height="161"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A9C-eq-4ae">
-                                                            <rect key="frame" x="41.5" y="0.0" width="24" height="53.5"/>
+                                                            <rect key="frame" x="5.5" y="0.0" width="60" height="53.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="60" id="GAc-Nr-ZME"/>
+                                                                <constraint firstAttribute="width" constant="60" id="Tcz-EF-a8I"/>
+                                                            </constraints>
                                                             <color key="tintColor" red="0.166549325" green="0.58482438329999997" blue="0.83051067590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <state key="normal" image="cart.fill.badge.plus" catalog="system"/>
+                                                            <state key="normal" image="cart.badge.plus" catalog="system"/>
                                                             <connections>
                                                                 <action selector="addToSelection:" destination="lPJ-Kv-i0b" eventType="touchUpInside" id="L28-kb-wES"/>
                                                             </connections>
@@ -217,7 +222,7 @@
     <resources>
         <image name="Athena" width="390" height="273"/>
         <image name="cart" catalog="system" width="128" height="102"/>
-        <image name="cart.fill.badge.plus" catalog="system" width="128" height="106"/>
+        <image name="cart.badge.plus" catalog="system" width="128" height="106"/>
         <image name="histoire" width="390" height="273"/>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -7,12 +7,10 @@
 
 import Foundation
 
-var selected = [Playmobil]()
-
 class Datas {
     
     func from(_ category: PlaymobilCategory) -> [Playmobil] {
-        return allPlaymo().filter({$0.category == category})
+        return allPlaymo().filter({$0.category == category}) // Filtre pour avoir tous les Playmobils pour un catégorie donnée
     }
 
     func allPlaymo() -> [Playmobil] {

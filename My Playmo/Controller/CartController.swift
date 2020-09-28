@@ -1,5 +1,5 @@
 //
-//  PlaymobilController.swift
+//  CartController.swift
 //  My Playmo
 //
 //  Created by Rodolphe DUPUY on 03/09/2020.
@@ -7,61 +7,58 @@
 
 import UIKit
 
-class PlaymobilController: UITableViewController {
-    
-    var category: PlaymobilCategory!
-    
-    var playmos: [Playmobil] = []
+var playbobilSelected = [Playmobil]() // Array de Playmobil vide()
 
+class CartController: UITableViewController {
+    
+    let id = "Reuse"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        playmos = Datas().from(category)
+        
+        tableView.register(CartCell.self, forCellReuseIdentifier: id) // Préparation TableView programmatique
     }
 
+    
     // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return playmos.count
+        return playbobilSelected.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let playmo = playmos[indexPath.row]
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "PlaymoCell") as? PlaymoCell {
-            cell.setupCell(playmo)
-            return cell
-        }
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: id) as! CartCell
+        cell.setupCell(playbobilSelected[indexPath.row])
+        // Configure the cell...
+        return cell
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return tableView.frame.height / 4
+        return 50
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Ma séléction de playmobil"
     }
 
-    /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-    */
-
-    /*
+    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            // Delete the row from the data source
+            playbobilSelected.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
-    */
+    
 
     /*
     // Override to support rearranging the table view.

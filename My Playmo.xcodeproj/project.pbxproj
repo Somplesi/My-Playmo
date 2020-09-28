@@ -74,24 +74,48 @@
 		08BF980C2500D7BB00EC9053 /* My Playmo */ = {
 			isa = PBXGroup;
 			children = (
+				A249C5DB2521BD7A003EAA80 /* Model */,
+				A249C5DD2521BE08003EAA80 /* View */,
+				A249C5DE2521BE38003EAA80 /* Controller */,
 				08BF98212500D7D600EC9053 /* blippo.ttf */,
 				08BF980D2500D7BB00EC9053 /* AppDelegate.swift */,
 				08BF980F2500D7BB00EC9053 /* SceneDelegate.swift */,
 				08BF98132500D7BB00EC9053 /* Main.storyboard */,
-				08BF98112500D7BB00EC9053 /* HomeController.swift */,
-				08BF98292500DBA100EC9053 /* CategoryCell.swift */,
-				08BF982B2500DD6A00EC9053 /* PlaymobilController.swift */,
-				08BF982D2500DF4100EC9053 /* PlaymoCell.swift */,
-				08BF98312500E32F00EC9053 /* CartController.swift */,
-				08BF982F2500E31A00EC9053 /* CartCell.swift */,
 				08BF98162500D7BC00EC9053 /* Assets.xcassets */,
 				08BF98182500D7BC00EC9053 /* LaunchScreen.storyboard */,
 				08BF981B2500D7BC00EC9053 /* Info.plist */,
+			);
+			path = "My Playmo";
+			sourceTree = "<group>";
+		};
+		A249C5DB2521BD7A003EAA80 /* Model */ = {
+			isa = PBXGroup;
+			children = (
 				08BF98232500D81700EC9053 /* PlaymobilCategory.swift */,
 				08BF98252500D85A00EC9053 /* Playmobil.swift */,
 				08BF98272500D8BB00EC9053 /* Datas.swift */,
 			);
-			path = "My Playmo";
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A249C5DD2521BE08003EAA80 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				08BF98292500DBA100EC9053 /* CategoryCell.swift */,
+				08BF982D2500DF4100EC9053 /* PlaymoCell.swift */,
+				08BF982F2500E31A00EC9053 /* CartCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A249C5DE2521BE38003EAA80 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				08BF98112500D7BB00EC9053 /* HomeController.swift */,
+				08BF982B2500DD6A00EC9053 /* PlaymobilController.swift */,
+				08BF98312500E32F00EC9053 /* CartController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

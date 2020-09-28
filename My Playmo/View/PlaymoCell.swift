@@ -21,18 +21,35 @@ class PlaymoCell: UITableViewCell {
         viewContainer.layer.cornerRadius = 10
         viewContainer.layer.shadowColor = UIColor.systemTeal.cgColor
         viewContainer.layer.shadowOffset = CGSize(width: 0, height: 3)
-        playmoIV.layer.cornerRadius = 10
         viewContainer.layer.shadowOpacity = 0.75
         viewContainer.layer.shadowRadius = 5
+
         self.playmo = playmobil
+
+        playmoIV.layer.cornerRadius = 10
         playmoIV.image = playmo.image
+
         playmoNameLbl.text = playmo.name
+
         refLbl.text = playmo.refString
-        priceLbl.text = playmo.priceEuro()
-        
+
+        priceLbl.text = playmo.priceEuro()        
     }
     
     @IBAction func addToSelection(_ sender: Any) {
-        selected.append(playmo)
+        playbobilSelected.append(playmo) // Ajout du Playmobil sélectionné
     }
+    
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
+    }
+
 }
